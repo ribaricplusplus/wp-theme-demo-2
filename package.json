@@ -1,0 +1,34 @@
+{
+	"name": "wp-theme-demo-2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build:js": "wp-scripts build",
+		"build:scss": "sass scss:build/css",
+		"watch:js": "wp-scripts start",
+		"watch:scss": "sass scss:build/css --watch",
+		"test:php": "wp-env run phpunit 'phpunit -c /var/www/html/wp-content/themes/wp-theme-demo-2/phpunit.xml --verbose'",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:js": "wp-scripts test-unit-js",
+		"lint:php": "./vendor/bin/phpcs -s .",
+		"lint:php:fix": "./vendor/bin/phpcbf .",
+		"lint:js": "wp-scripts lint-js",
+		"lint:js:fix": "wp-scripts format '*.js' .wp-env.json package.json composer.json scripts/ js/ specs/",
+		"lint:scss:fix": "wp-scripts lint-style --fix",
+		"format": "concurrently \"npm run lint:js:fix\" \"npm run lint:php:fix\" \"npm run lint:scss:fix\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@testing-library/dom": "8.11.1",
+		"@testing-library/jest-dom": "5.16.1",
+		"@wordpress/e2e-test-utils": "5.4.10",
+		"@wordpress/env": "4.1.3",
+		"@wordpress/scripts": "19.2.2",
+		"concurrently": "6.4.0",
+		"prettier": "npm:wp-prettier@2.2.1-beta-1",
+		"sass": "1.45.0"
+	}
+}
