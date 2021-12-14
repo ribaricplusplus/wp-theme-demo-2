@@ -6,7 +6,6 @@ WordPress theme skeleton with the following features:
 - e2e tests with puppeteer. See `specs/` directory.
 - JS unit tests. See `js/basic-script/__tests__/` directory.
 - PHPUnit tests. See `phpunit/` directory.
-- Autoloading`phpunit/` directory.
 - Composer autoloading.
 - Building JavaScript
 - SCSS
